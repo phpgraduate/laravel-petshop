@@ -1,25 +1,59 @@
-## Laravel PHP Framework
+## Pet Shop built in Laravel 4.2 and SQLite database.
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/downloads.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+This is done as an assignment as part of job selection process.
+Assignment:
+This app is a pet shop who provide pet care services for customers. 
+They provide the following services at the moment but can provide more services later on. 
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, and caching.
+•Washing
+•Shampooing
+•Pedicure
+•Manicure
+•Polishing
 
-Laravel aims to make the development process a pleasing one for the developer without sacrificing application functionality. Happy developers make the best code. To this end, we've attempted to combine the very best of what we have seen in other web frameworks, including frameworks implemented in other languages, such as Ruby on Rails, ASP.NET MVC, and Sinatra.
+They provide these services to Cats, Dogs, Rabbits, Tortoises and pet snakes as well as a number of other animals
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+Some services are offered to some animals eg: Shampooing is offered for cats and dogs but not for tortoises, and polishing is offered for tortoises.
 
-## Official Documentation
+Make a simple application that allows the user to 
 
-Documentation for the entire framework can be found on the [Laravel website](http://laravel.com/docs).
+•Add/delete services
+•Add/delete pet types
+•allocate a service to one or more pet type
+•Show a list of services and the pet types they are offered to
+•Show a list of pets and the services available for each pet type
 
-### Contributing To Laravel
+##How to install
+### Step 1: Get the code
+#### Option 1: Git Clone
 
-**All issues and pull requests should be filed on the [laravel/framework](http://github.com/laravel/framework) repository.**
+	git clone https://github.com/phpgraduate/laravel-petshop.git laravel
 
-### License
+#### Option 2: Download the repository
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+	https://github.com/phpgraduate/laravel-petshop/archive/master.zip
+
+### Step 2: Use Composer to install dependencies
+#### Option 1: Composer is not installed globally
+
+    cd {project-folder}
+	curl -s http://getcomposer.org/installer | php
+	php composer.phar install --dev
+#### Option 2: Composer is installed globally
+
+    cd laravel
+	composer install --dev
+
+### Step 3: Populate Database
+	Open the file ***app/config/database.php*** edit it to match your local database settings.
+	
+### Step 4: Populate Database
+Run these commands to create and populate Users table:
+	php artisan migrate
+	php artisan db:seed
+	
+### Setp 5: Setup a virtual host and visit url
+	
+## License
+
+[MIT license](http://opensource.org/licenses/MIT)
